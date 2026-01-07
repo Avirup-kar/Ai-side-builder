@@ -12,7 +12,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 const corsoptions = {
-  origin: process.env.TRUSTED_ORIGINS?.split(',') || [],
+  origin: process.env.TRUSTED_ORIGINS?.split(',') || ['https://ai-side-builder.vercel.app'],
   credentials: true,
 }
 
