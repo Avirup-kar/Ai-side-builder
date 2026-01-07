@@ -14,6 +14,9 @@ const port = process.env.PORT || 3000;
 const corsoptions = {
   origin: process.env.TRUSTED_ORIGINS?.split(',') || ['https://ai-side-builder.vercel.app'],
   credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+  optionsSuccessStatus: 200
 }
 
 app.use(cors(corsoptions))
