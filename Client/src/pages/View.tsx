@@ -16,8 +16,8 @@ const View = () => {
   useEffect(() => {
     const fetchCode = async () => {
     try {
-        const { data } = await api.get(`/api/project/preview/${projectId}`);
-        setCode(data.project.current_code);
+        const { data } = await api.get(`/api/project/published/${projectId}`);
+        setCode(data.code);
         setLoading(false);
     } catch (error: any) {
         toast.error(error?.response?.data?.message || error.message);

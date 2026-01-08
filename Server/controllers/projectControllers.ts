@@ -266,6 +266,7 @@ export const getProjectPreview = async (req: Request, res: Response) => {
  }
 }
 
+
 // Get published projects
 export const getPublishedProjects = async (req: Request, res: Response) => {
       try {
