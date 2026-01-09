@@ -1,6 +1,7 @@
 # AI Website Builder
 
-A full-stack app to generate and manage AI-powered websites. This repo contains a React + Vite frontend (`Client/`) and an Express + TypeScript backend (`Server/`) with Prisma for the database.
+An intelligent platform that helps you turn ideas into real websites in minutes. Just describe what you want, preview the result instantly, and refine it through simple requests.
+Built for speed, creativity, and flexibility — so you can focus on ideas, not complexity. This repo contains a React + Vite frontend (`Client/`) and an Express + TypeScript backend (`Server/`) with Prisma for the database.
 
 ## 🚀 Quick start
 
