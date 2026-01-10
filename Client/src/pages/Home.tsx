@@ -1,9 +1,9 @@
-import { useState, type FormEvent } from "react";
+import { useState } from "react";
 import { Loader2Icon } from "lucide-react";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "sonner";
 import { useNavigate } from "react-router-dom";
-// import api from "@/config/axios";
+import api from "@/config/axios";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -12,9 +12,8 @@ const Home = () => {
 
   const {data: session} = authClient.useSession();
 
-  const onSubmitHandler = async (e: FormEvent<HTMLFormElement>) => {
+  const onSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast("This feature is not available for public use");
     try {
       if (!session?.user){
       navigate("/auth/sign-up");   
@@ -27,9 +26,9 @@ const Home = () => {
     setLoading(true)
 
     // Simulate API call
-    // const {data} = await api.post('api/user/project', { initial_prompt: input })
+    const {data} = await api.post('api/user/project', { initial_prompt: input })
     setLoading(false);
-    // navigate(`/projects/${data.projectId}`);
+    navigate(`/projects/${data.projectId}`);
     } catch (error: any) {
       setLoading (false);
       toast.error(error?.response?.data?.message || error.message);
