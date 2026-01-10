@@ -3,7 +3,6 @@ import { Loader2Icon } from "lucide-react";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "sonner";
 import { useNavigate } from "react-router-dom";
-import api from "@/config/axios";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -26,9 +25,9 @@ const Home = () => {
     setLoading(true)
 
     // Simulate API call
-    const {data} = await api.post('api/user/project', { initial_prompt: input })
+    // const {data} = await api.post('api/user/project', { initial_prompt: input })
     setLoading(false);
-    navigate(`/projects/${data.projectId}`);
+    // navigate(`/projects/${data.projectId}`);
     } catch (error: any) {
       setLoading (false);
       toast.error(error?.response?.data?.message || error.message);
