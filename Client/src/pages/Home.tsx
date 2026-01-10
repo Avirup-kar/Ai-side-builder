@@ -15,15 +15,15 @@ const Home = () => {
   const onSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     // e.preventDefault();
     toast("This feature is not available for public use");
-    try {
-      if (!session?.user){
-      navigate("/auth/sign-up");   
-      toast.error("Please login to GetStarted");
-      return;
-    }else if(!input.trim()){
-      toast.error("Please provide a valid input");
-      return;
-    }
+    // try {
+    //   if (!session?.user){
+    //   navigate("/auth/sign-up");   
+    //   toast.error("Please login to GetStarted");
+    //   return;
+    // }else if(!input.trim()){
+    //   toast.error("Please provide a valid input");
+    //   return;
+    // }
     setLoading(true)
 
     // Simulate API call
