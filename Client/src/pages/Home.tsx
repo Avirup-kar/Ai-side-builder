@@ -13,6 +13,7 @@ const Home = () => {
 
   const onSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    toast.error("This feature is not available for public use!");
     try {
       if (!session?.user){
       navigate("/auth/sign-up");   
