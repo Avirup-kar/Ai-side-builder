@@ -3,7 +3,7 @@ import { Loader2Icon } from "lucide-react";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "sonner";
 import { useNavigate } from "react-router-dom";
-import api from "@/config/axios";
+// import api from "@/config/axios";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ const Home = () => {
   const {data: session} = authClient.useSession();
 
   const onSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
-    // e.preventDefault();
+    e.preventDefault();
     toast("This feature is not available for public use");
     try {
       if (!session?.user){
