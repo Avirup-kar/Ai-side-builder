@@ -23,8 +23,8 @@ const Home = () => {
     //   toast.error("Please provide a valid input");
     //   return;
     // }
-    setLoading(true)
     toast.error("This feature is not available for public use!");
+    setLoading(true)
     // Simulate API call
     // const {data} = await api.post('api/user/project', { initial_prompt: input })
     setLoading(false);
