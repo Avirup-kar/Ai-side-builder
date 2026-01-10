@@ -13,7 +13,7 @@ const Home = () => {
   const {data: session} = authClient.useSession();
 
   const onSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    // e.preventDefault();
     toast("This feature is not available for public use");
     // try {
     //   if (!session?.user){
@@ -51,7 +51,7 @@ const Home = () => {
           Create, customize and publish website faster than ever with our AI Site Builder.
         </p>
 
-        <form onSubmit={onSubmitHandler} className="bg-white/10 max-w-3xl mt-10 relative w-full rounded-3xl p-3 border border-gray-400 focus-within:ring-2 ring-gray-400 transition-all">
+        <form onSubmit={onSubmitHandler..} className="bg-white/10 max-w-3xl mt-10 relative w-full rounded-3xl p-3 border border-gray-400 focus-within:ring-2 ring-gray-400 transition-all">
           <textarea onChange={e => setInput(e.target.value)} value={input} className="bg-transparent pl-1 overflow-y-scroll scrollbar-hide leading-relaxed outline-none text-gray-300 resize-none w-full" rows={3} placeholder="Describe your thoughts in detail . ." required />
             <div className="w-full flex justify-end items-center">
           <div className="rainbow py-px px-px bg-gray-600 relative inline-flex z-0 overflow-hidden  rounded-full">
