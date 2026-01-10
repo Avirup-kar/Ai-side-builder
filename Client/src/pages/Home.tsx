@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Loader2Icon } from "lucide-react";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "sonner";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import api from "@/config/axios";
 
 const Home = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -15,26 +15,26 @@ const Home = () => {
   const onSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     // e.preventDefault();
     toast("This feature is not available for public use");
-    // try {
-    //   if (!session?.user){
-    //   navigate("/auth/sign-up");   
-    //   toast.error("Please login to GetStarted");
-    //   return;
-    // }else if(!input.trim()){
-    //   toast.error("Please provide a valid input");
-    //   return;
-    // }
-    // setLoading(true)
+    try {
+      if (!session?.user){
+      navigate("/auth/sign-up");   
+      toast.error("Please login to GetStarted");
+      return;
+    }else if(!input.trim()){
+      toast.error("Please provide a valid input");
+      return;
+    }
+    setLoading(true)
 
-    // // Simulate API call
+    // Simulate API call
     // const {data} = await api.post('api/user/project', { initial_prompt: input })
-    // setLoading(false);
+    setLoading(false);
     // navigate(`/projects/${data.projectId}`);
-    // } catch (error: any) {
-    //   setLoading (false);
-    //   toast.error(error?.response?.data?.message || error.message);
-    //   console.log(error);  
-    // }
+    } catch (error: any) {
+      setLoading (false);
+      toast.error(error?.response?.data?.message || error.message);
+      console.log(error);  
+    }
   }
 
   return (
