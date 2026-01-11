@@ -40,7 +40,7 @@ const Home = () => {
     <>
       <section className="flex flex-col items-center text-white text-sm pt-33 px-4 font-poppins">
           {/* BACKGROUND IMAGE */}
-          <img src="/background2.png" className="fixed inset-0 -z-10 size-full opacity-70" alt="" />
+          <img src="/background2.png" className="fixed inset-0 -z-10 size-full opacity-70" alt="bgImage" />
 
         <h1 className="text-center text-[40px] leading-12 md:text-5xl md:leading-17.5 mt-4 font-semibold max-w-3xl">
           Turn thoughts into websites instantly, with AI.
