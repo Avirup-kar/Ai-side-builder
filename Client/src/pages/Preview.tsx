@@ -40,7 +40,7 @@ const Preview = () => {
   if(loading){
     return (
       <div className="w-full h-screen flex justify-center items-center">
-        <Loader2Icon className="text-7 animate-spin text-indigo-200"/>
+        <Loader2Icon className="text-8 animate-spin text-indigo-200"/>
       </div>
     )
   }
