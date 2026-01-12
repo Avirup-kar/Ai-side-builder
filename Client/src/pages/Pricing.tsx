@@ -69,7 +69,7 @@ const Pricing = () => {
                                     ))}
                                 </ul>
                                 <button onClick={() => handlePurchase(plan.id)} className="w-full py-2 px-4 bg-indigo-500 hover:bg-indigo-600 active:scale-95 text-sm rounded-md transition-all">
-                                    Buy Now
+                                    Buy now
                                 </button>
                             </div>
                         ))}
