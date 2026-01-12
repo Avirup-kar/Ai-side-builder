@@ -115,7 +115,7 @@ useEffect(() => {
       <div className='flex max-lg:flex-col sm:items-center gap-4 px-4 py-2 no-scrollbar'>
         {/* left */}
         <div className="flex items-center gap-2 sm:min-w-90 text-nowrap">
-          <img src="/favicon.svg" alt="logo" onClick={() => navigate('/')} className="h-6 cursor-pointer"/>
+          <img src="/favicon.svg" alt="logoImg" onClick={() => navigate('/')} className="h-6 cursor-pointer"/>
           <div className='max-w-64 sm:max-w-xs'>
             <p className='text-sm text-medium capitalize truncate'>{project.name}</p>
             <p className='text-xs text-gray-400 -mt-0.51'>Previewing last saved version</p>
