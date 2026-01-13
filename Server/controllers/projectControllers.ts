@@ -225,7 +225,7 @@ export const deleteProject = async (req: Request, res: Response) => {
     const { projectId } = req.params;
 
     if (!userId) {
-      return res.status(401).json({message: "Unauthorized"});
+      return res.status(401).json({message: "Unauthorized to access"});
     }
 
      await prisma.websiteProject.delete({
