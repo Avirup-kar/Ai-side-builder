@@ -90,6 +90,3 @@ npx prisma studio
 ## Contributing
 Feel free to open issues or PRs. If you'd like, I can add a template for issues/PRs, CI workflows, or more detailed developer setup.
 
----
-
-If you'd like, I can add badges (CI, coverage), or expand sections (deployment, testing, infra).
