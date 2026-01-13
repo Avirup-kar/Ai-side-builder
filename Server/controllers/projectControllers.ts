@@ -16,7 +16,7 @@ export const makeRevision = async (req: Request, res: Response) => {
 
     if (!userId || !user) {
       return res.status(401).json({
-        message: "Unauthorized",
+        message: "Unauthorized to access",
       });
     }
 
