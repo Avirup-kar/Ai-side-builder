@@ -49,7 +49,7 @@ export const makeRevision = async (req: Request, res: Response) => {
        data: {credits: {decrement: 5}}
     })
 
-    // Enhance user prompt
+    //Enhance user prompt
     const promptEnhanceResponse = await openai.chat.completions.create({
       model: "kwaipilot/kat-coder-pro:free",
       messages: [
@@ -86,7 +86,7 @@ export const makeRevision = async (req: Request, res: Response) => {
     }
   })
 
-    //Generate your website
+  //Generate your website
   const codeGenerationResponse = await openai.chat.completions.create({
     model: "kwaipilot/kat-coder-pro:free",
     messages: [
@@ -126,7 +126,7 @@ export const makeRevision = async (req: Request, res: Response) => {
       where: {id: userId},
       data: {credits: {increment: 5}}
       })
-      return  res.json({ message: "Unable to generate the code, please try again" });;
+      return  res.json({ message: "Unable to generate the code, please try again" });
     }
 
  //Creat version for the project
