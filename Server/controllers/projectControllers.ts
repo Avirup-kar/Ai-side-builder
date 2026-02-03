@@ -218,7 +218,7 @@ export const rollbackToVersion = async (req: Request, res: Response) => {
 }
 
 
-// Controller Function to Delete a Project
+//Controller Function to Delete a Project
 export const deleteProject = async (req: Request, res: Response) => {
     try {
     const userId = req.userId;
@@ -240,7 +240,7 @@ export const deleteProject = async (req: Request, res: Response) => {
 }
 
 
-// Controller for getting project code for preview
+//Controller for getting project code for preview
 export const getProjectPreview = async (req: Request, res: Response) => {
     try {
     const userId = req.userId;
