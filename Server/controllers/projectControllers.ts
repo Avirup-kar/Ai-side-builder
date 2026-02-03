@@ -267,7 +267,7 @@ export const getProjectPreview = async (req: Request, res: Response) => {
 }
 
 
-// Get published projects
+//Get published projects
 export const getPublishedProjects = async (req: Request, res: Response) => {
       try {
 
@@ -284,7 +284,7 @@ export const getPublishedProjects = async (req: Request, res: Response) => {
 }
 
 
-// Get a single project by id
+//Get a single project by id
 export const getProjectById = async (req: Request, res: Response) => {
     try {
     const { projectId } = req.params;
@@ -305,7 +305,7 @@ export const getProjectById = async (req: Request, res: Response) => {
 }
 
 
-// Controller to save project code
+//Controller to save project code
 export const saveProjectCode = async (req: Request, res: Response) => {
      try {
     const userId = req.userId;
