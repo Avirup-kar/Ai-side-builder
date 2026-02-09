@@ -16,7 +16,7 @@ export const makeRevision = async (req: Request, res: Response) => {
 
     if (!userId || !user) {
       return res.status(401).json({
-        message: "Unauthorized",
+        message: "Unauthorized to access",
       });
     }
 
@@ -49,7 +49,7 @@ export const makeRevision = async (req: Request, res: Response) => {
        data: {credits: {decrement: 5}}
     })
 
-    // Enhance user prompt
+    //Enhance user prompt
     const promptEnhanceResponse = await openai.chat.completions.create({
       model: "kwaipilot/kat-coder-pro:free",
       messages: [
@@ -86,7 +86,7 @@ export const makeRevision = async (req: Request, res: Response) => {
     }
   })
 
-    //Generate your website
+  //Generate your website
   const codeGenerationResponse = await openai.chat.completions.create({
     model: "kwaipilot/kat-coder-pro:free",
     messages: [
@@ -126,7 +126,7 @@ export const makeRevision = async (req: Request, res: Response) => {
       where: {id: userId},
       data: {credits: {increment: 5}}
       })
-      return  res.json({ message: "Unable to generate the code, please try again" });;
+      return  res.json({ message: "Unable to generate the code, please try again" });
     }
 
  //Creat version for the project
@@ -173,7 +173,7 @@ export const rollbackToVersion = async (req: Request, res: Response) => {
     const userId = req.userId;
 
     if (!userId) {
-      return res.status(401).json({message: "Unauthorized"});
+      return res.status(401).json({message: "Unauthorized to access"});
     }
 
     const { projectId, versionId } = req.params;
@@ -218,14 +218,14 @@ export const rollbackToVersion = async (req: Request, res: Response) => {
 }
 
 
-// Controller Function to Delete a Project
+//Controller Function to Delete a Project
 export const deleteProject = async (req: Request, res: Response) => {
     try {
     const userId = req.userId;
     const { projectId } = req.params;
 
     if (!userId) {
-      return res.status(401).json({message: "Unauthorized"});
+      return res.status(401).json({message: "Unauthorized to access"});
     }
 
      await prisma.websiteProject.delete({
@@ -240,7 +240,7 @@ export const deleteProject = async (req: Request, res: Response) => {
 }
 
 
-// Controller for getting project code for preview
+//Controller for getting project code for preview
 export const getProjectPreview = async (req: Request, res: Response) => {
     try {
     const userId = req.userId;
@@ -267,7 +267,7 @@ export const getProjectPreview = async (req: Request, res: Response) => {
 }
 
 
-// Get published projects
+//Get published projects
 export const getPublishedProjects = async (req: Request, res: Response) => {
       try {
 
@@ -284,7 +284,7 @@ export const getPublishedProjects = async (req: Request, res: Response) => {
 }
 
 
-// Get a single project by id
+//Get a single project by id
 export const getProjectById = async (req: Request, res: Response) => {
     try {
     const { projectId } = req.params;
@@ -305,7 +305,7 @@ export const getProjectById = async (req: Request, res: Response) => {
 }
 
 
-// Controller to save project code
+//Controller to save project code
 export const saveProjectCode = async (req: Request, res: Response) => {
      try {
     const userId = req.userId;

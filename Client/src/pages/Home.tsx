@@ -1,46 +1,46 @@
 import { useState } from "react";
 import { Loader2Icon } from "lucide-react";
-import { authClient } from "@/lib/auth-client";
+// import { authClient } from "@/lib/auth-client";
 import { toast } from "sonner";
-import { useNavigate } from "react-router-dom";
-import api from "@/config/axios";
+// import { useNavigate } from "react-router-dom";
+// import api from "@/config/axios";
 
 const Home = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const {data: session} = authClient.useSession();
+  // const {data: session} = authClient.useSession();
 
   const onSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    try {
-      if (!session?.user){
-      navigate("/auth/sign-up");   
-      toast.error("Please login to GetStarted");
-      return;
-    }else if(!input.trim()){
-      toast.error("Please provide a valid input");
-      return;
-    }
+    // try {
+    //   if (!session?.user){
+    //   navigate("/auth/sign-up");   
+    //   toast.error("Please login to GetStarted");
+    //   return;
+    // }else if(!input.trim()){
+    //   toast.error("Please provide a valid input");
+    //   return;
+    // }
+    toast.error("This feature is not available for public use!");
     setLoading(true)
-
     // Simulate API call
-    const {data} = await api.post('api/user/project', { initial_prompt: input })
+    // const {data} = await api.post('api/user/project', { initial_prompt: input })
     setLoading(false);
-    navigate(`/projects/${data.projectId}`);
-    } catch (error: any) {
-      setLoading (false);
-      toast.error(error?.response?.data?.message || error.message);
-      console.log(error);  
-    }
+    // navigate(`/projects/${data.projectId}`);
+    // } catch (error: any) {
+    //   setLoading (false);
+    //   toast.error(error?.response?.data?.message || error.message);
+    //   console.log(error);  
+    // }
   }
 
   return (
     <>
       <section className="flex flex-col items-center text-white text-sm pt-33 px-4 font-poppins">
           {/* BACKGROUND IMAGE */}
-          <img src="/background2.png" className="fixed inset-0 -z-10 size-full opacity-70" alt="" />
+          <img src="/background2.png" className="fixed inset-0 -z-10 size-full opacity-70" alt="bgImage" />
 
         <h1 className="text-center text-[40px] leading-12 md:text-5xl md:leading-17.5 mt-4 font-semibold max-w-3xl">
           Turn thoughts into websites instantly, with AI.

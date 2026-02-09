@@ -93,7 +93,7 @@ const Community = () => {
             </div>
         ):(
             <div className="flex flex-col items-center justify-center h-[80vh]">
-                <p className="text-xl text-gray-500">There is no published projects yet!</p>
+                <p className="text-xl text-gray-500">No published projects yet!</p>
             </div>
         )}
       </div>

@@ -52,7 +52,7 @@ const Pricing = () => {
                                 <h3 className="text-xl font-bold">{plan.name}</h3>
                                 <div className="my-2">
                                     <span className="text-4xl font-bold">{plan.price}</span>
-                                    <span className="text-gray-300"> / {plan.credits} credits</span>
+                                    <span className="text-gray-300"> / {plan.credits} Credits</span>
                                 </div>
 
                                 <p className="text-gray-300 mb-6">{plan.description}</p>
@@ -69,7 +69,7 @@ const Pricing = () => {
                                     ))}
                                 </ul>
                                 <button onClick={() => handlePurchase(plan.id)} className="w-full py-2 px-4 bg-indigo-500 hover:bg-indigo-600 active:scale-95 text-sm rounded-md transition-all">
-                                    Buy Now
+                                    Buy now
                                 </button>
                             </div>
                         ))}
