@@ -76,7 +76,7 @@ const EditorPanel = ({ selectedElement, onUpdate, onClose }: EditorPanelProps) =
 
         <div className='grid grid-cols-2 gap-3'>
           <div>
-            <label className="block text-xs font-medium text-gray-500 mb-1">Font size</label>
+            <label className="block text-xs font-medium text-gray-500 mb-1">Font Size</label>
             <input value={values?.styles?.fontSize} onChange={(e) => handleStyleChange("fontSize", e.target.value)} className="w-full text-sm p-2 border border-gray-400 rounded-md focus: ring-2 focus: ring-indigo-500 outline-none"/>
           </div>
         </div>
