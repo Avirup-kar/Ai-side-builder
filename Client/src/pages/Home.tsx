@@ -23,7 +23,7 @@ const Home = () => {
     //   toast.error("Please provide a valid input");
     //   return;
     // }
-    toast.error("This feature is not available for public use!");
+    toast.error("This feature is not available for public use for API limitation but you can see the video how it work here (https://www.linkedin.com/posts/avirup-kar-145201322_aipowered-saas-activity-7415392742115102721-KFOg?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFGLP4UBUf9-tIHxOlB27mxWZ8lsLiS-prw)! ");
     setLoading(true)
     // Simulate API call
     // const {data} = await api.post('api/user/project', { initial_prompt: input })
