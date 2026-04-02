@@ -7,7 +7,7 @@ Built for speed, creativity, and flexibility — so you can focus on ideas, not 
 
 Prerequisites:
 - Node.js 18+ (recommended)
-- PostgreSQL (or a compatible DATABASE_URL)
+- PostgreSQL (or a compatible DATABASE_URL using prisma orm)
 - npm, yarn or pnpm
 
 From project root:
