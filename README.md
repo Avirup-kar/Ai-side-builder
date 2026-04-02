@@ -25,7 +25,7 @@ npm run dev
 
 ```bash
 cd Client
-npm install
+npm install or npm i
 npm run dev
 ```
 
