@@ -247,7 +247,7 @@ export const getProjectPreview = async (req: Request, res: Response) => {
     const { projectId } = req.params;
 
     if(!userId) {
-      return res.status(401).json({message: "Unauthorized"});
+      return res.status(401).json({message: "Unauthorized to access"});
     }
 
     const project = await prisma.websiteProject.findFirst({
