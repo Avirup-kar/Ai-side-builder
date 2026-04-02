@@ -313,7 +313,7 @@ export const saveProjectCode = async (req: Request, res: Response) => {
     const { code } = req.body;
 
     if(!userId) {
-      return res.status(401).json({message: "Unauthorized"});
+      return res.status(401).json({message: "Unauthorized to access"});
     }
 
     if(!code) {
